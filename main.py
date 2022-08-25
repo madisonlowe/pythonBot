@@ -14,3 +14,9 @@ def fib2(n):   # return Fibonacci series up to n
         result.append(a)
         a, b = b, a+b
     return result
+
+# To run this code, run the following in the terminal:
+# python3
+# import main 
+# main.fib(n) 
+# Other ways to do it! Don't know them yet!

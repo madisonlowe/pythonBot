@@ -5,15 +5,24 @@ So I don't forget what I'm intending on doing.
 To do, in order:
 
 - ~~Gitignore!~~
-- Hello World and some other test code to figure out what Python's trying to achieve.
-- Clone down Andy's Python project to play around with.
-- Build bot.
-  - Plan this out properly.
-  - Basic, easiest achievable goal.
-  - Then, pick an actual goal.
-- Become a menace.
+- Build D&D bot.
+  - Version 1:
+    - Literally just follow a tutorial to figure out how it works.
+  - Version 2:
+    - Functionality:
+      - Timezone checks:
+        - Save time zone settings from server members.
+        - View overlapping free times in each timezone.
+      - Causing problems:
+        - Fix the dice.
+        - Music functionality but it only plays ambient sounds over covers of Careless Whisper.
 - Profit.
 - Never touch Python again.
+
+Helpful learning side exercises:
+
+- Hello World and some other test code to figure out what Python's trying to achieve.
+- Clone down Andy's Python project to play around with.
 
 ## Notes
 

@@ -37,3 +37,4 @@ Learning exercises to pursue:
 
 - Valerio suggested the fCC introduction to Python as a good place to absorb general knowledge.
 - Read more about interpreters. Get the point, don't get the implementation, so focus there.
+- Positional arguments versus keyword arguments for calling functions? That's fun.

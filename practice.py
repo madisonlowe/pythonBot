@@ -17,6 +17,6 @@ def fib2(n):   # return Fibonacci series up to n
 
 # To run this code, run the following in the terminal:
 # python3
-# import main 
-# main.fib(n) 
+# import practice 
+# practice.fib(n) 
 # Other ways to do it! Don't know them yet!

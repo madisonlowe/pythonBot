@@ -31,7 +31,7 @@ Learning points to remember:
 - Run `python3` to open the interpreter. When you have both versions installed, need to specify the one you want to use.
 - Imports only run once per session in the interpreter. Docs say import operations are expensive, so they'll only run once.
 - Run `quit()` to close the interpreter.
-- See notes in `main.py` on importing and running that code.
+- See notes in `practice.py` on importing and running that code.
 
 Learning exercises to pursue:
 

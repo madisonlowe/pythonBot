@@ -2,6 +2,7 @@
 .huskyrc.json
 out
 log.log
+venv/
 **/node_modules
 *.pyc
 *.vsix
@@ -42,6 +43,7 @@ pydevd*.log
 nodeLanguageServer/**
 nodeLanguageServer.*/**
 dist/**
+.env
 # translation files
 *.xlf
 *.nls.*.json

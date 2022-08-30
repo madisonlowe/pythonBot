@@ -101,3 +101,4 @@ Interacting with Discord APIs:
 - Had a silly syntax error where had function call after client.guilds in my for in loop. Mind out!
 - Got it working.
 - You can also pull out everyone who is a member of the guild, from the guild property.
+- Did that too.

@@ -2,12 +2,14 @@ import os # os module provides functions for interacting with directories
 # need to import it to be able to interact with the underlying operating system
 
 import discord # import discord
+intents = discord.Intents.default() # sets intents for bot, intents subscribe bots to specific events, see docs
+
 from dotenv import load_dotenv # import load_dotenv from dotenv
 
 load_dotenv() # take environment variables from .env
 TOKEN = os.getenv('DISCORD_TOKEN') # assigns TOKEN to os function that retrieves DISCORD_TOKEN from .env
 
-client = discord.Client() # assigns client to an instance of Client() from discord module
+client = discord.Client(intents=intents) # assigns client to an instance of Client() from discord module
 # a client handles events, tracks state, and generally interacts with and lets us connect to the discord api
 
 @client.event # this is a decorator: syntax for calling higher order functions. decorators wrap functions, modifying behaviour

@@ -87,3 +87,6 @@ source bin/activate
 - [This was helpful.](https://ordinarycoders.com/blog/article/python-virtual-environment)
 
 Coding:
+
+- Connected to the client in `bot.py` and went through the code, googled some stuff.
+- Set up `.env` and entered details.

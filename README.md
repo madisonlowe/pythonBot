@@ -32,6 +32,7 @@ Learning points to remember:
 - Imports only run once per session in the interpreter. Docs say import operations are expensive, so they'll only run once.
 - Run `quit()` to close the interpreter.
 - See notes in `practice.py` on importing and running that code.
+- See [this article](https://medium.com/@jtpaasch/the-right-way-to-use-virtual-environments-1bc255a0cba7) on freezing requirements in Python projects.
 
 Learning exercises to pursue:
 

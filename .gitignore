@@ -2,6 +2,7 @@
 .huskyrc.json
 out
 log.log
+venv/
 **/node_modules
 *.pyc
 *.vsix

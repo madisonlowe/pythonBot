@@ -49,6 +49,41 @@ Setting up on the Discord end:
 - Created a guild (server on Discord) to add it to.
 - Added bot to the test server using OAuth2 on the Dev Portal. This is the step at which you can provide your bot with permissions. Be as granular as possible.
 
-Programming in Python:
+### Programming in Python
 
--
+Setting up pip:
+
+- Install `pip`, which is the standard package manager for Python (like `npm` for JavaScript). To check what version of `pip` you have, you can run `which pip3` in the terminal: `pip` should come bundled with installations of Python3.
+- Use `pip` in a Python Virtual Environment.
+- "To avoid installing packages directly into your system Python installation, you can use a virtual environment. A virtual environment provides an isolated Python interpreter for your project. Any packages that you use inside this environment will be independent of your system interpreter. This means that you can keep your project’s dependencies separate from other projects and the system at large." [Source](https://realpython.com/what-is-pip/).
+- Used the following code to accomplish the above:
+
+```
+$ python3 -m venv venv
+$ source venv/bin/activate
+(venv) $ pip3 --version
+pip 21.2.3 from .../python3.10/site-packages/pip (python 3.10)
+(venv) $ pip --version
+pip 21.2.3 from .../python3.10/site-packages/pip (python 3.10)
+```
+
+- "Here you create a virtual environment named venv by using Python’s built-in venv module. Then you activate it with the source command. The parentheses surrounding your venv name indicate that you successfully activated the virtual environment."
+- "Finally, you check the version of the pip3 and pip executables inside your activated virtual environment. Both point to the same pip module, so once your virtual environment is activated, you can use either pip or pip3."
+
+Installing `discord.py`:
+
+- Ran the following code to install the Python Discord API library: `pip install -U discord.py`.
+
+More virtual environment stuff:
+
+- Once you've closed it, to restart the venv for the project, run the following:
+
+```
+cd venv
+source bin/activate
+```
+
+- This changes directory into the venv folder, then reactivates the environment you've set up.
+- [This was helpful.](https://ordinarycoders.com/blog/article/python-virtual-environment)
+
+Coding:

@@ -19,10 +19,14 @@ async def on_ready(): # asynchronous function called on_ready()
     for guild in client.guilds: # for loop through guilds available inside client connection object
         if guild.name == GUILD: # if the guild name matches the .env guild name, break out of the loop
             break
+    
     print(
         f'{client.user} is connected to the following guild:\n'
         f'{guild.name}(id:{guild.id}'
         )
+    
+    members = '\n - '.join([member.name for member in guild.members]) # assigns members to a formatted string, joined to a loop
+    print(f'Guild Members:\n - {members}') # prints out the list of guild members, formatted
 # some stackoverflow guy says we could end this function with: on_ready = client.event(on_ready)
 # the @ symbol is a shorthand to eliminating having to type that, though
 

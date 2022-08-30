@@ -97,3 +97,7 @@ Interacting with Discord APIs:
 
 - `Client` gives us access to a wide range of Discord APIs.
 - Discord calls `on_ready()` once a connection is secured and data is prepared. So, you can access guild data inside of `on_ready()` so long as you connect to a guild by including appropriate tokens inside your `.env` file.
+- Set up this connection and attempted to run.
+- Had a silly syntax error where had function call after client.guilds in my for in loop. Mind out!
+- Got it working.
+- You can also pull out everyone who is a member of the guild, from the guild property.

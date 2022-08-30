@@ -86,7 +86,14 @@ source bin/activate
 - This changes directory into the venv folder, then reactivates the environment you've set up.
 - [This was helpful.](https://ordinarycoders.com/blog/article/python-virtual-environment)
 
-Coding:
+Creating a Discord connection:
 
 - Connected to the client in `bot.py` and went through the code, googled some stuff.
 - Set up `.env` and entered details.
+- Attempted to run bot, but needed to set [intents](https://discordpy.readthedocs.io/en/stable/intents.html). Did this.
+- Ran bot, and client successfully connected to Discord using token!
+
+Interacting with Discord APIs:
+
+- `Client` gives us access to a wide range of Discord APIs.
+- Discord calls `on_ready()` once a connection is secured and data is prepared. So, you can access guild data inside of `on_ready()` so long as you connect to a guild by including appropriate tokens inside your `.env` file.

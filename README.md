@@ -1,6 +1,6 @@
-# Action Plan
+# README
 
-So I don't forget what I'm intending on doing.
+## Action Plan
 
 To do, in order:
 
@@ -38,3 +38,17 @@ Learning exercises to pursue:
 - Valerio suggested the fCC introduction to Python as a good place to absorb general knowledge.
 - Read more about interpreters. Get the point, don't get the implementation, so focus there.
 - Positional arguments versus keyword arguments for calling functions? That's fun.
+
+## Log
+
+Setting up on the Discord end:
+
+- Made a Discord dev account.
+- Used the Discord Dev Portal to make an application. Any application that interacts with the Discord APIs needs a Discord application, not just bots! Bots are a sub-set of the total interface. However, this will (hopefully) be a bot, so that's what we select all the settings for.
+- Created a bot.
+- Created a guild (server on Discord) to add it to.
+- Added bot to the test server using OAuth2 on the Dev Portal. This is the step at which you can provide your bot with permissions. Be as granular as possible.
+
+Programming in Python:
+
+-

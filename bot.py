@@ -14,20 +14,10 @@ client = discord.Client(intents=intents) # assigns client to an instance of Clie
 
 @client.event # this is a decorator: syntax for calling higher order functions. decorators wrap functions, modifying behaviour
 async def on_ready(): # asynchronous function called on_ready()
-    print(f'{client.user} has connected to Discord!') 
-
-    for guild in client.guilds: # for loop through guilds available inside client connection object
-        if guild.name == GUILD: # if the guild name matches the .env guild name, break out of the loop
-            break
-    
-    print(
+    guild = discord.utils.get(client.guilds, name=GUILD) # get() checks client.guilds for name property matching GUILD
+    print( # runs print code accordingly once found. see README.md notes for more notes from previous code
         f'{client.user} is connected to the following guild:\n'
-        f'{guild.name}(id:{guild.id}'
-        )
-    
-    members = '\n - '.join([member.name for member in guild.members]) # assigns members to a formatted string, joined to a loop
-    print(f'Guild Members:\n - {members}') # prints out the list of guild members, formatted
-# some stackoverflow guy says we could end this function with: on_ready = client.event(on_ready)
-# the @ symbol is a shorthand to eliminating having to type that, though
+        f'{guild.name}(id: {guild.id})'
+    )
 
 client.run(TOKEN) # runs bot using login token from .env

@@ -103,3 +103,62 @@ Interacting with Discord APIs:
 - Got it working.
 - You can also pull out everyone who is a member of the guild, from the guild property.
 - Did that too.
+
+Using utility functions:
+
+- There are utility functions available inside of `discord.py`.
+- "The term “utility” has no precise definition. A piece of code can be called a utility if it seems too small to be considered as a separate application, and too general-purpose to be considered as part of a particular program. A database program would not be a utility, for example, but a function which performed a single operation on a list could be." [Source](https://www.csee.umbc.edu/courses/331/resources/lisp/onLisp/04utilityFunctions.pdf).
+- Python docs have some pages on utilities that are a bit crunchier to read too. Maybe read later!
+- So. In the code where we're printing the guild name and identifier, we could clean this code up with some utilities.
+- Read the whole tutorial for step-by-step details.
+- Basically, `discord.utils` contains a lot of functions which can help us by abstracting away unnecessary code and work.
+- For example, we can replace our original for loop checking for guild name matches with `discord.utils.find()` which takes a function (a predicate), which identifies some characteristic of the element in the iterable that you’re looking for. Once `find()` locates that element that satisfies the predicate, it will return it: so, similar to looping and then breaking once the loop is complete.
+- Note: below example takes in lambda, which is basically an anonymous function? [Read this](https://stackoverflow.com/questions/16501/what-is-a-lambda-function).
+- To simplify `find()` even further, we could even use `get()` instead.
+- The `get()` utility takes the iterable and some keyword arguments. The keyword arguments represent attributes of the elements in the iterable that must all be satisfied for `get()` to return the element.
+- So, to give examples:
+
+```python
+# original code
+@client.event # this is a decorator: syntax for calling higher order functions. decorators wrap functions, modifying behaviour
+async def on_ready(): # asynchronous function called on_ready()
+    print(f'{client.user} has connected to Discord!')
+
+    for guild in client.guilds: # for loop through guilds available inside client connection object
+        if guild.name == GUILD: # if the guild name matches the .env guild name, break out of the loop
+            break
+
+    print(
+        f'{client.user} is connected to the following guild:\n'
+        f'{guild.name}(id:{guild.id}'
+        )
+
+    members = '\n - '.join([member.name for member in guild.members]) # assigns members to a formatted string, joined to a loop
+    print(f'Guild Members:\n - {members}') # prints out the list of guild members, formatted
+# some stackoverflow guy says we could end this function with: on_ready = client.event(on_ready)
+# the @ symbol is a shorthand to eliminating having to type that, though
+```
+
+```python
+# using find()
+@client.event
+async def on_ready(): # asynchronous function called on_ready()
+    guild = discord.utils.find(lambda g: g.name == GUILD, client.guilds) # find() takes lambda g as predicate, wants g.name to match
+    print( # once g.name matches the GUILD variable we've set, it'll return the element and print accordingly
+        f'{client.user} is connected to the following guild:\n'
+        f'{guild.name}(id: {guild.id})'
+    )
+```
+
+```python
+# using get()
+@client.event
+async def on_ready():
+    guild = discord.utils.get(client.guilds, name=GUILD) # get checks client.guilds for a name property matching GUILD variable
+    print( # when it gets one, runs print code
+        f'{client.user} is connected to the following guild:\n'
+        f'{guild.name}(id: {guild.id})'
+    )
+```
+
+- "Technical Detail: Under the hood, get() actually uses the attrs keyword arguments to build a predicate, which it then uses to call find()."

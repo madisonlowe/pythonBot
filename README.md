@@ -192,3 +192,10 @@ class CustomClient(discord.Client):
 ```
 
 - Just like before, we've created a client variable. The actual Client is different, however. Instead of using the normal base class, client is an instance of CustomClient, which has an overridden on_ready() function.
+
+DMs to members on joining channels:
+
+- As of time of writing, had a nightmare with this and couldn't get it to work.
+- Not sure whether because of personal Discord settings and linked accounts, potentially making it harder for code to recognise my test account as a new member? Or whether syntax wrong, as some of the syntax in this tutorial is aged, and online implementations of same functionality have been done in different ways from a cursory search.
+- Going to look into more resources about it.
+- Potential resources: find an active Discord bot and perceive the code. Lots on GitHub to eyeball!

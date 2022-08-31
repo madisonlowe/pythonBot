@@ -14,10 +14,10 @@ client = discord.Client(intents=intents) # assigns client to an instance of Clie
 
 @client.event # this is a decorator: syntax for calling higher order functions. decorators wrap functions, modifying behaviour
 async def on_ready(): # asynchronous function called on_ready()
-    guild = discord.utils.get(client.guilds, name=GUILD) # get() checks client.guilds for name property matching GUILD
-    print( # runs print code accordingly once found. see README.md notes for more notes from previous code
-        f'{client.user} is connected to the following guild:\n'
-        f'{guild.name}(id: {guild.id})'
-    )
+    print(f'{client.user.name} is connected to Discord!')
+
+@client.event
+async def on_member_join(member=discord.Member):
+    print(f'Member {member.name} just joined the server.')
 
 client.run(TOKEN) # runs bot using login token from .env

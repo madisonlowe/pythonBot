@@ -162,3 +162,33 @@ async def on_ready():
 ```
 
 - "Technical Detail: Under the hood, get() actually uses the attrs keyword arguments to build a predicate, which it then uses to call find()."
+
+Responding to events:
+
+- So. We know `on_ready()` is an event: its decorator says so.
+- An event is something that happens on Discord that you can use to trigger a reaction in your code. Your code will listen for and then respond to events.
+- The `on_ready()` event handler handles the event where the `Client` has made a connection to Discord and prepared its response data. When Discord fires an event, `discord.py` will route the event data to the corresponding event handler on your connected `Client`.
+- There are two ways in `discord.py` to implement an event handler:
+  - Using the client.event decorator.
+  - Creating a subclass of Client and overriding its handler methods.
+- There should be no difference between these two implementation styles for events. We'll be using the decorator version primarily though, as it looks similar to how bot commands are implemented.
+- See below for examples, though, of decorator event implementation versus class event implementation:
+
+```python
+# decorator implementation
+@client.event
+async def on_ready():
+    guild = discord.utils.get(client.guilds, name=GUILD)
+    print(
+        f'{client.user} is connected to the following guild:\n'
+        f'{guild.name}(id: {guild.id})'
+```
+
+```python
+# class implementation
+class CustomClient(discord.Client):
+    async def on_ready(self):
+        print(f'{self.user} has connected to Discord!')
+```
+
+- Just like before, we've created a client variable. The actual Client is different, however. Instead of using the normal base class, client is an instance of CustomClient, which has an overridden on_ready() function.

@@ -233,3 +233,39 @@ class CustomClient(discord.Client):
 - Changed previous `bot.py` we've been referring to, and it is now `retiredBot.py` instead. From now on, we're operating on a whole new `bot.py`.
 
 </details>
+
+### Attempt 2: Docs Time
+
+<details>
+
+<summary>Quickstart Discord docs.</summary>
+
+- See `example_bot.py` for the example bot populated from the discord.py docs.
+- Literally worked instantly, absolutely livid.
+- Sometimes, I guess you just have to be taught the 'check your docs are decent' lesson a million times in a row. Million and first time lucky!
+- Will say, finding the [discord.py docs](https://discordpy.readthedocs.io/en/stable/quickstart.html) a lot easier to read than when I tried to read them at the beginning of the week, I think by virtue of having poured over what all the Python stuff is doing previously. Hopefully this continues to contribute towards moving a little quicker!
+- Maybe useful note from the docs: "discord.py revolves around the concept of events. An event is something you listen to and then respond to. For example, when a message happens, you will receive an event about it that you can respond to."
+
+</details>
+
+<details>
+
+<summary>Reading docs and learnings from experimenting.</summary>
+
+- Updating code won't update bot in realtime if the bot is live. Have to shut it down and reboot.
+- Debugging and error feedback would be super helpful, but don't totally get how it works in Python yet? It's also something I want to get better at using and implementing in JavaScript, so - taking lessons from this experience - might swap back to a JavaScript project for a bit that focuses on that, for some cross-language learning (tee hee).
+- Had a look at [these docs on coroutines](https://docs.python.org/3/library/asyncio-task.html#coroutine).
+- "Python's asyncio package (introduced in Python 3.4) and its two keywords, async and await , serve different purposes but come together to help you declare, build, execute, and manage asynchronous code."
+- [This article on asynchronicity in Python](https://blog.allegro.tech/2022/01/how-do-coroutines-work-internally-in-python.html) was okay!
+- The [bit of the docs on intents](https://discordpy.readthedocs.io/en/stable/api.html#discord.Intents) is especially helpful. Has a lot of the events listed, with sub-pages describing them in more detail. Difficult to find from main page, as these docs are a bit tricky to navigate - look here if you're stuck instead!
+- Read a bit more about object-oriented programming and design, and software design more generally. SOLID is the acronym for the first five OOD principles.
+
+</details>
+
+<details>
+
+<summary>TODO: Implement a goal.</summary>
+
+- Going to experiment with some new stuff I've been reading about in the docs on a JavaScript project to learn a bit more in a language and environment I'm more comfortable with!
+
+</details>

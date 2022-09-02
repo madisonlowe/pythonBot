@@ -2,27 +2,22 @@
 
 ## Action Plan
 
-To do, in order:
+Previous action plan:
 
-- ~~Gitignore!~~
-- Build D&D bot.
-  - Version 1:
-    - Literally just follow a tutorial to figure out how it works.
-  - Version 2:
-    - Functionality:
-      - Timezone checks:
-        - Save time zone settings from server members.
-        - View overlapping free times in each timezone.
-      - Causing problems:
-        - Fix the dice.
-        - Music functionality but it only plays ambient sounds over covers of Careless Whisper.
+- Follow tutorial.
 - Profit.
-- Never touch Python again.
 
-Helpful learning side exercises:
+New and current action plan:
 
-- Hello World and some other test code to figure out what Python's trying to achieve.
-- Clone down Andy's Python project to play around with.
+- Follow docs.
+- Profit at a much slower but more productive rate.
+
+Functionality goals:
+
+- Make organising the D&D channel easier.
+- Timezone checks.
+- Fix the dice rolls, for fun and evil.
+- Music mixes with ambient sounds, but only for covers of Careless Whisper.
 
 ## Notes
 
@@ -42,17 +37,22 @@ Learning exercises to pursue:
 
 ## Log
 
-Setting up on the Discord end:
+<details>
+
+<summary>Setting up on the Discord end.</summary>
 
 - Made a Discord dev account.
 - Used the Discord Dev Portal to make an application. Any application that interacts with the Discord APIs needs a Discord application, not just bots! Bots are a sub-set of the total interface. However, this will (hopefully) be a bot, so that's what we select all the settings for.
 - Created a bot.
 - Created a guild (server on Discord) to add it to.
 - Added bot to the test server using OAuth2 on the Dev Portal. This is the step at which you can provide your bot with permissions. Be as granular as possible.
+</details>
 
 ### Programming in Python
 
-Setting up pip:
+<details>
+
+<summary>Setting up pip.</summary>
 
 - Install `pip`, which is the standard package manager for Python (like `npm` for JavaScript). To check what version of `pip` you have, you can run `which pip3` in the terminal: `pip` should come bundled with installations of Python3.
 - Use `pip` in a Python Virtual Environment.
@@ -87,14 +87,22 @@ source bin/activate
 - This changes directory into the venv folder, then reactivates the environment you've set up.
 - [This was helpful.](https://ordinarycoders.com/blog/article/python-virtual-environment)
 
-Creating a Discord connection:
+</details>
+
+<details>
+
+<summary>Creating a Discord connection.</summary>
 
 - Connected to the client in `bot.py` and went through the code, googled some stuff.
 - Set up `.env` and entered details.
 - Attempted to run bot, but needed to set [intents](https://discordpy.readthedocs.io/en/stable/intents.html). Did this.
 - Ran bot, and client successfully connected to Discord using token!
 
-Interacting with Discord APIs:
+</details>
+
+<details>
+
+<summary>Interacting with Discord APIs.</summary>
 
 - `Client` gives us access to a wide range of Discord APIs.
 - Discord calls `on_ready()` once a connection is secured and data is prepared. So, you can access guild data inside of `on_ready()` so long as you connect to a guild by including appropriate tokens inside your `.env` file.
@@ -104,7 +112,11 @@ Interacting with Discord APIs:
 - You can also pull out everyone who is a member of the guild, from the guild property.
 - Did that too.
 
-Using utility functions:
+</details>
+
+<details>
+
+<summary>Using utility functions.</summary>
 
 - There are utility functions available inside of `discord.py`.
 - "The term “utility” has no precise definition. A piece of code can be called a utility if it seems too small to be considered as a separate application, and too general-purpose to be considered as part of a particular program. A database program would not be a utility, for example, but a function which performed a single operation on a list could be." [Source](https://www.csee.umbc.edu/courses/331/resources/lisp/onLisp/04utilityFunctions.pdf).
@@ -163,7 +175,11 @@ async def on_ready():
 
 - "Technical Detail: Under the hood, get() actually uses the attrs keyword arguments to build a predicate, which it then uses to call find()."
 
-Responding to events:
+</details>
+
+<details>
+
+<summary>Responding to events.</summary>
 
 - So. We know `on_ready()` is an event: its decorator says so.
 - An event is something that happens on Discord that you can use to trigger a reaction in your code. Your code will listen for and then respond to events.
@@ -193,7 +209,11 @@ class CustomClient(discord.Client):
 
 - Just like before, we've created a client variable. The actual Client is different, however. Instead of using the normal base class, client is an instance of CustomClient, which has an overridden on_ready() function.
 
-DMs to members on joining channels:
+</details>
+
+<details>
+
+<summary>DMs to members on joining channels.</summary>
 
 - As of time of writing, had a nightmare with this and couldn't get it to work.
 - Not sure whether because of personal Discord settings and linked accounts, potentially making it harder for code to recognise my test account as a new member? Or whether syntax wrong, as some of the syntax in this tutorial is aged, and online implementations of same functionality have been done in different ways from a cursory search.
@@ -201,4 +221,15 @@ DMs to members on joining channels:
 - Potential resources: find an active Discord bot and perceive the code. Lots on GitHub to eyeball!
 - Current solve: am abandoning this functionality for now in favour of maintaining velocity and continuing tutorial, will circle back when I know more about what's going on. Not finding it useful trying to troubleshoot.
 
-Responding to messages:
+</details>
+
+<details>
+
+<summary>New direction.</summary>
+
+- Confirmed syntax and implementation of tutorial were aged! We love an educational website that publishes no dates on its articles that you have to go digging for, truly.
+- Recentering on the official `discord.py` docs and going to follow those from the beginning.
+- On reflection, prefer this approach: feels more useful as a general learning tool, as the most fun and productive thing about trying to write in Python hasn't been learning Python, but has been learning more about programming generally. Feels like trying to understand the docs - rather than trying to put together a single working product - can provide benefit in this area.
+- Changed previous `bot.py` we've been referring to, and it is now `retiredBot.py` instead. From now on, we're operating on a whole new `bot.py`.
+
+</details>

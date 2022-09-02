@@ -266,6 +266,6 @@ class CustomClient(discord.Client):
 
 <summary>TODO: Implement a goal.</summary>
 
-- Lorem ipsum.
+- Going to experiment with some new stuff I've been reading about in the docs on a JavaScript project to learn a bit more in a language and environment I'm more comfortable with!
 
 </details>

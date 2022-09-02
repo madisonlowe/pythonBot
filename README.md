@@ -199,3 +199,6 @@ DMs to members on joining channels:
 - Not sure whether because of personal Discord settings and linked accounts, potentially making it harder for code to recognise my test account as a new member? Or whether syntax wrong, as some of the syntax in this tutorial is aged, and online implementations of same functionality have been done in different ways from a cursory search.
 - Going to look into more resources about it.
 - Potential resources: find an active Discord bot and perceive the code. Lots on GitHub to eyeball!
+- Current solve: am abandoning this functionality for now in favour of maintaining velocity and continuing tutorial, will circle back when I know more about what's going on. Not finding it useful trying to troubleshoot.
+
+Responding to messages:

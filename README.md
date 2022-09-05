@@ -1,22 +1,24 @@
-# README
+# Python Bot Practice
 
-## Action Plan
+This is a repository to track my attempt at building a Discord bot in Python!
 
-Previous action plan:
+I've never worked with Python before, and I've never built a bot or worked with the Discord API either, so creating functionality is a little slow going! However, my main goal (and main learning point) is to learn more general technical knowledge through the experience of trying out a new language, as I only started programming in the past couple of weeks.
 
-- Follow tutorial.
-- Profit.
+Please see below for my goals with this project, notes of general learnings, and an in-depth chronological log of steps that I have taken and what I have learned through doing them.
 
-New and current action plan:
+Thanks for stopping by!
 
-- Follow docs.
-- Profit at a much slower but more productive rate.
+## Goals
 
-Functionality goals:
+Currently working towards:
 
-- Make organising the D&D channel easier.
-- Timezone checks.
-- Fix the dice rolls, for fun and evil.
+- Follow docs on setting up boilerplate, then experiment with customisation to understand what's going on.
+- Work on functionality goals.
+
+Functionality goals, in order of (presumed) ease:
+
+- Fixed D&D dice rolls, for fun and evil.
+- Timezone checks against player timezones.
 - Music mixes with ambient sounds, but only for covers of Careless Whisper.
 
 ## Notes
@@ -37,6 +39,8 @@ Learning exercises to pursue:
 
 ## Log
 
+### Pre-Work
+
 <details>
 
 <summary>Setting up on the Discord end.</summary>
@@ -47,6 +51,8 @@ Learning exercises to pursue:
 - Created a guild (server on Discord) to add it to.
 - Added bot to the test server using OAuth2 on the Dev Portal. This is the step at which you can provide your bot with permissions. Be as granular as possible.
 </details>
+
+<br />
 
 ### Programming in Python
 
@@ -233,6 +239,8 @@ class CustomClient(discord.Client):
 - Changed previous `bot.py` we've been referring to, and it is now `retiredBot.py` instead. From now on, we're operating on a whole new `bot.py`.
 
 </details>
+
+<br />
 
 ### Attempt 2: Docs Time
 
